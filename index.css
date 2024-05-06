@@ -40,6 +40,7 @@ header{
 .ebook{
     width: 210px;
     margin: auto;
+    position:relative;
 }
 
 
@@ -84,6 +85,7 @@ h1, h2{
     font-weight: 600;
     background-color: #ffc700;
     font-size: 1.2em;
+    color:#050505;
 }
 
 #pros{
@@ -244,4 +246,14 @@ input:focus{
     display: flex;
     gap: 10px;
     align-items: center;
+}
+
+@media (min-width:700px){
+    .conteinercards{
+        flex-direction: row;
+    }
+
+    .card:first-child{
+        margin: 0px;
+    }
 }
