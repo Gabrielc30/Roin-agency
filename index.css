@@ -8,6 +8,8 @@
 }
 body{
     min-width: 350px;
+    background-image:linear-gradient(to right
+    , #050505, #252525);
 }
 header{
     background-image: linear-gradient(to right, #050505, #252525);
@@ -89,11 +91,12 @@ h1, h2{
 }
 
 #pros{
-    padding-top: 7em;
+    margin-top: 7em;
     background-image: linear-gradient(to right, #050505, #252525);
-    text-align: center;
+    text-align:center;
     font-family: 'poppins';
 }
+
 
 #pros p{
     font-size: 2em;
@@ -110,7 +113,7 @@ li{
     font-size: 1.2em;
     margin-top: 25px;
     color: #ffffff;
-    font-weight: 500;
+    font-weight: 300;
 }
 
 #testimonios {
@@ -250,7 +253,10 @@ input:focus{
 
 @media (min-width:700px){
     .conteinercards{
+        padding-top: 25px;
         flex-direction: row;
+        max-width: 700px;
+        margin: auto;
     }
 
     .card:first-child{
