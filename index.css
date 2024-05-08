@@ -6,7 +6,9 @@
     max-width: 1920px;
     
 }
-
+a{
+    color:#fff;
+}
 html{
     background-image:linear-gradient(to right
     , #050505, #252525);
