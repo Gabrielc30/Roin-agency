@@ -6,9 +6,7 @@
     max-width: 1920px;
     
 }
-a{
-    color:#fff;
-}
+
 html{
     background-image:linear-gradient(to right
     , #050505, #252525);
@@ -176,24 +174,22 @@ li{
 
 
 #form {
-    background-image: linear-gradient(to right
-    , #050505, #252525);
-    padding-top: 50px;
     padding-bottom: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
 }
 
 .formflex{
     display: flex;
     flex-direction: column;
     text-align: center;
-    justify-content: space-between;
+    justify-content: space-around;
     background-image: linear-gradient(to top, #151515, #353535) ;
-    padding: 40px;
+    padding:25px;
     border-radius: 25px;
-    height: 440px;
+    height: 470px;
     box-shadow: 4px 4px 10px -4px rgb(05 05 05 / 60%);
     width: 100%;   
     max-width: 700px;
@@ -227,7 +223,7 @@ input{
     color:#fff;
     background:transparent;
     border-bottom: solid 1px #353535;
-    
+    width: 90%;
 }
 
 input:focus{
@@ -236,19 +232,21 @@ input:focus{
 }
 
 input:hover{
-    background: #fff;
-    transition: .3s;
+    background-color: #fff;
+    transition: .2s;
     color: #050505;
 }
+
 
 
 .submit{
     background-color: #ffc700;
     color: #050505;
     font-size: 1em;
-    padding: 4.5px 0;
+    padding: 4.5px 10px;
     cursor: pointer;
     border: none;
+    margin: 0 auto;
 }
 
 .submit:hover{
@@ -256,6 +254,16 @@ input:hover{
     background:#ffc700 ;
     color: #fff;
 }
+
+.submit:active{
+    box-shadow:0px 0px 10px -3px rgb(75, 74, 74) ;
+    transition: .1s;
+}
+
+.submit:focus{
+    background-color: #ffc700;
+}
+
 
 footer{
     background-image: linear-gradient(to right, #050505, #252525);
@@ -289,6 +297,131 @@ footer{
     display: flex;
     gap: 10px;
     align-items: center;
+}
+
+
+/*validaciones*/
+
+.formulario__grupo-input{
+    position: relative;
+}
+
+.formulario__input-error{
+    font-family: 'poppins';
+    font-size: 12px;
+    margin-bottom: 0;
+    color: #f00;
+    display: none;
+}
+
+.formulario__input-error-activo{
+    display: block;
+}
+
+.formulario__validacion-estado{
+    position: absolute;
+    opacity: 0;
+    right: 20px;
+    bottom: 10px;
+}
+
+.formulario__checkbox{
+    margin-right: 5px;
+    padding: 0;
+    width: 15px;
+}
+
+.formulario__label{
+    font-family: 'poppins';
+    font-size: 14px;
+    color:#fff;
+    font-weight: 600;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+.formulario__mensaje{
+    font-family: 'poppins';
+    font-size: 12px;
+    margin-bottom: 0;
+    color: #f00;
+    display: none;
+}
+
+.formulario__mensaje-activo{
+    display: block;
+}
+
+.formulario__mensaje-exito{
+    font-size: 12px;
+    color: #119200;
+    font-family: 'poppins';
+    display: none;
+
+}
+
+.formulario__mensaje-exito-activo{
+    display: block;
+}
+
+
+/*Estilos para validaciones*/
+
+.formulario__grupo-correcto .formulario__validacion-estado{
+    color:#1ed12d;
+    opacity:1;
+}
+
+.formulario__grupo-incorrecto .formulario__validacion-estado{
+    color:#f00;
+    opacity: 1;
+}
+
+
+
+/*mediaqueries*/
+
+@media (min-width:400px){
+    .formulario__validacion-estado{
+        position: absolute;
+        opacity: 0;
+        right: 25px;
+        bottom: 10px;
+    }
+    
+}
+
+@media (min-width:485px){
+    .formulario__validacion-estado{
+        position: absolute;
+        opacity: 0;
+        right: 30px;
+        bottom: 10px;
+    }
+    
+}
+
+@media (min-width:585px){
+    .formulario__validacion-estado{
+        position: absolute;
+        opacity: 0;
+        right: 35px;
+        bottom: 10px;
+    }
+    
+}
+
+@media (min-width:685px){
+    .formulario__validacion-estado{
+        position: absolute;
+        opacity: 0;
+        right: 40px;
+        bottom: 10px;
+    }
+    
 }
 
 @media (min-width:700px){
@@ -329,7 +462,7 @@ footer{
 
     #form{ 
         margin: 0;
-        padding: 50px 25px 0 25px; 
+        padding: 0px 25px 0 25px; 
 
     }
 
@@ -345,6 +478,48 @@ footer{
         width: 550px;
         margin: auto;
     }
+
+    .formulario__validacion-estado{
+        position: absolute;
+        opacity: 0;
+        right: 40px;
+        bottom: 10px;
+    }
+       
+}
+
+@media (min-width: 730px){
+    
+    .formulario__validacion-estado{
+        position: absolute;
+        opacity: 0;
+        right: 45px;
+        bottom: 10px;
+    }
+
+}
+
+
+@media (min-width: 740px){
+    
+    .formulario__validacion-estado{
+        position: absolute;
+        opacity: 0;
+        right: 50px;
+        bottom: 10px;
+    }
+
+}
+
+@media (min-width: 755px){
+    
+    .formulario__validacion-estado{
+        position: absolute;
+        opacity: 0;
+        right: 58px;
+        bottom: 10px;
+    }
+
 }
 
 @media (min-width:1000px){
@@ -390,7 +565,7 @@ footer{
     
     #form{ 
         margin: 0;
-        padding: 50px 25px 0 25px; 
+        padding: 0px 25px 0 25px; 
 
     }
 
@@ -414,55 +589,5 @@ footer{
     li{
         font-size: 1.5em;
     }
-
-
-    /*
-    #form p{
-        font-size: 1.8em;
-
-    }
-
-    #form h2{
-        margin: 0%;
-    }
-
-    input, .submit{
-        font-size: 1.2em;
-        margin: 0 15px;
-    }
- 
-    
-
-   
-
-    #testimonios p{
-        font-size: 1.8em;
-    }
-    .conteinercards{
-        max-width: 1140px;
-    }
-
-    .card{
-        height: 350px;
-        max-width: 275px;
-
-    }
-
-    .pie{
-        font-size: 1.2em;
-    }
-
-    footer .container{
-        padding: 0px;
-        margin: 0px;
-    }
-    footer{
-        color: #fff;
-        text-align: center;
-    }
-    .container{
-        padding: 0;
-        margin: 0;
-    }
-}*/
 }
+
