@@ -72,7 +72,7 @@
                 <form action="" id="formulario">
                     <div class="formulario__grupo" id="grupo__nombre">
                         <div class="formulario__grupo-input">
-                            <input class="formulario__input" type="text" name="nombre" placeholder="Ingrese su nombre"/>
+                            <input onclick="removeMensaje()" class="formulario__input" type="text" name="nombre" placeholder="Ingrese su nombre"/>
                             <i class="formulario__validacion-estado bi bi-x-circle-fill"></i>
                         </div>
                         <span class="formulario__input-error">El nombre debe ser de 3 a 16 dígitos y solo puede contener letras </span>
@@ -80,7 +80,7 @@
                     
                     <div class="formulario__grupo" id="grupo__email">
                         <div class="formulario__grupo-input">
-                            <input class="formulario__input" type="email" name="email" placeholder="Ingrese su correo">
+                            <input onclick="removeMensaje()" class="formulario__input" type="email" name="email" placeholder="Ingrese su correo">
                             <i class="formulario__validacion-estado bi bi-x-circle-fill"></i>
                         </div>
                         <span class="formulario__input-error">ingrese un correo electrónico válido</span>
@@ -88,16 +88,16 @@
 
                     <div class="formulario__grupo" id="grupo__terminos">
                         <label class="formulario__label">
-                        <input class="formulario__checkbox" type="checkbox" name="terminos"> Acepto los <a href="">Términos y Condiciones</a>.
+                        <input onclick="removeMensaje()" class="formulario__checkbox" type="checkbox" name="terminos" id="terminos"> Acepto los <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnVC1aHtaWTE4i9gzVeHGBS3NH_RKCLdc-IA&s" target="_blank">Términos y Condiciones</a>.
                         </label>
                     </div>
 
-                    <div class="formulario__mensaje" id="formulario__mensaje">
+                    <div onclick="removeMensaje()" class="formulario__mensaje" id="formulario__mensaje">
                         <span><i class="bi bi-exclamation-triangle-fill"></i><b> Error:</b> Completa el formulario</span>
                     </div>
 
-                    <div class="formulario__grupo formulario__grupo-btn-enviar">
-                        <input class="submit" type="submit" value="Descargar">
+                    <div class="formulario__grupo formulario__grupo-btn-enviar" id="grupo__enviar">
+                        <input onclick="removeMensaje()" class="submit" type="submit" value="Descargar">
                         <span class="formulario__mensaje-exito" id="formulario__mensaje-exito">Enviado con éxito, en breve recibirá el correo de descarga</span>
                     </div>
                 </form>  
@@ -117,3 +117,4 @@
        
 
     </body>
+</html>

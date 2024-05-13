@@ -102,6 +102,7 @@ h1{
 .cta:hover{
     box-shadow:0px 0px 10px -2px rgb(255, 255, 255) ;
     transition:.2s;
+    color: #fff;
 }
 
 #pros{
@@ -360,6 +361,7 @@ a{
     color: #119200;
     font-family: 'poppins';
     display: none;
+    margin-top: 15px;
 
 }
 
@@ -590,4 +592,3 @@ a{
         font-size: 1.5em;
     }
 }
-
